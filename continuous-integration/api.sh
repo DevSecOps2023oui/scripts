@@ -23,6 +23,9 @@ fi
 # Copy config files
 cp -rf $ENV_FILE $REPOSITORY || exit
 
+# Generate prisma client
+npx prisma generate || exit
+
 # Build
 tsc || exit
 
