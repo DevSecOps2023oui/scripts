@@ -22,4 +22,4 @@ fi
 npm run build || exit
 
 # Copy files to www
-sudo cp -avr "$REPOSITORY/build/." $WWWW || exit
+sudo cp -avr "$REPOSITORY/build/." $WWW || exit
