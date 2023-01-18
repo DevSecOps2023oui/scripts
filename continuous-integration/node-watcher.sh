@@ -42,8 +42,9 @@ tsc || exit
 
 # Create csv directory
 mkdir -p "$CSV_DIR/new" || exit
-mkdir -p "$CSV_DIR/bad-integrity" || exit
-mkdir -p "$CSV_DIR/history" || exit
+mkdir -p "$CSV_DIR/processing" || exit
+mkdir -p "$CSV_DIR/failed" || exit
+mkdir -p "$CSV_DIR/completed" || exit
 
 # Restart pm2
 pm2 restart $PM2_PROCESS || pm2 start $START_FILE --name $PM2_PROCESS || exit
